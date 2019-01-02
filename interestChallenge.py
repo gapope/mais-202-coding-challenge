@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 #Accessing and treating data
 data = pd.read_csv("data.csv")
-grouped = data.groupby('purpose')['int_rate'].mean()
+grouped = data.groupby('purpose')['int_rate'].mean().sort_values(ascending=False)
 
 #Printing grouped data to console
 print(grouped)
